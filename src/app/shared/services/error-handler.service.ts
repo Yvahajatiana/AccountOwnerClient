@@ -30,6 +30,7 @@ export class ErrorHandlerService {
 
   private handleOtherError(error: HttpErrorResponse) {
     this.createErorMessage(error);
+    $('#errorModal').modal();
   }
 
   private createErorMessage(error: HttpErrorResponse) {
