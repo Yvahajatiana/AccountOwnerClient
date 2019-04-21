@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { NotFoundComponent } from './error-pages/not-found/not-found.component';
 import { InternalServerComponent } from './error-pages/internal-server/internal-server.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { InternalServerComponent } from './error-pages/internal-server/internal-
     BrowserModule,
     HttpClientModule,
     OwnerModule,
+    SharedModule,
     RouterModule.forRoot([
       { path: 'home', component: HomeComponent },
       { path: 'owner', loadChildren: './owner/owner.module#OwnerModule'},
